@@ -1,11 +1,10 @@
+# <big> <strong>Awesome AI Infrastructures</strong> </big>
+
 ***
 
 <p align="center">
-:bangbang: <big> <strong>Awesome AI Infrastructures</strong> </big> :bangbang:
-</p>
+:orange_book: List of AI infrastructures (a.k.a., machine learning systems, pipelines, and platforms) for machine/deep learning training and/or inference in production :electric_plug:. Feel free to contribute / star / fork / pull request. Any recommendations and suggestions are welcome.
 
-<p align="center">
-:orange_book: List of AI infrastructures (a.k.a., machine learning systems, pipelines, and platforms) for machine/deep learning training and/or inference in production :electric_plug:.
 </p>
 
 ***
@@ -15,7 +14,7 @@
 This list contains some popular actively-maintained AI infrastructures that focus on one or more of the following topics:
 
 - Architecture of **end-to-end** machine learning **pipelines**
-- **Deployment** at scale in production on Cloud or on end devices
+- **Deployment** at scale in production on Cloud :cloud: or on end devices :iphone:
 - Novel ideas of efficient large-scale distributed **training**
 
 in **no specific order**. This list cares more about overall architectures of AI solutions in production instead of individual machine/deep learning training or inference frameworks.
@@ -279,7 +278,9 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 ![fig-pocketflow](images/tencent-pocketflow-arch.png)
 
-# Timeline of Large-Scale Distributed AI Training Efforts
+# Large-Scale Distributed AI Training Efforts
+
+Major milestones for "ImageNet in X nanoseconds" :roller_coaster:.
 
 | initial date | resources             | elapsed           | top-1 accuracy | batch size | link                             |
 |--------------|-----------------------|-------------------|----------------|------------|----------------------------------|
