@@ -4,7 +4,7 @@
 :tent: Awesome AI Infrastructures :tent:
 </h1>
 
-<p align="center"> 
+<p align="center">
 :orange_book: List of AI infrastructures (a.k.a., machine learning systems, pipelines, and platforms) for machine/deep learning training and/or inference in production :electric_plug:. Feel free to contribute / star / fork / pull request. Any recommendations and suggestions are welcome :tada:.
 </p>
 
@@ -44,7 +44,7 @@ in **no specific order**. This list cares more about overall architectures of AI
 
 ### [KubeFlow](https://www.kubeflow.org/) - The Machine Learning Toolkit for [Kubernetes](https://kubernetes.io/) ([Google](https://www.google.com/about/))
 
-> The Kubeflow project is dedicated to making deployments of machine learning (ML) workflows on **[Kubernetes](https://kubernetes.io/)** simple, portable and scalable. Our goal is not to recreate other services, but to provide a straightforward way to deploy best-of-breed open-source systems for ML to diverse infrastructures. Anywhere you are running [Kubernetes](https://kubernetes.io/), you should be able to run Kubeflow.
+> The Kubeflow project is dedicated to making deployments of machine learning (ML) workflows on [Kubernetes](https://kubernetes.io/) simple, portable and scalable. Our goal is not to recreate other services, but to provide a straightforward way to deploy best-of-breed open-source systems for ML to diverse infrastructures. Anywhere you are running [Kubernetes](https://kubernetes.io/), you should be able to run Kubeflow.
 
 > Kubeflow started as an open sourcing of the way Google ran [TensorFlow](https://www.tensorflow.org/) internally, based on a pipeline called TensorFlow Extended.
 
@@ -87,9 +87,9 @@ in **no specific order**. This list cares more about overall architectures of AI
 
 > The RAPIDS suite of open source software libraries gives you the freedom to execute end-to-end data science and analytics pipelines entirely on GPUs. It relies on NVIDIA® CUDA® primitives for low-level compute optimization, but exposes that GPU parallelism and high-bandwidth memory speed through user-friendly Python interfaces.
 
-> RAPIDS is the result of contributions from the machine learning community and [GPU Open Analytics Initiative (GOAI)](http://gpuopenanalytics.com/) partners, such as [Anaconda](https://www.anaconda.com/), [BlazingDB](https://blazingdb.com/), [Gunrock](https://github.com/gunrock/gunrock), etc.
+> RAPIDS is the result of contributions from the machine learning community and [GPU Open Analytics Initiative (GOAI)](http://gpuopenanalytics.com/) partners, such as [Anaconda](https://www.anaconda.com/), [BlazingDB](https://blazingdb.com/), [__Gunrock__](https://github.com/gunrock/gunrock), etc.
 
-| [__blog__](https://rapids.ai/) | [__github__](https://github.com/RAPIDSai) |
+| [__homepage__](https://rapids.ai/) | [__blog__](https://medium.com/rapids-ai) | [__github__](https://github.com/RAPIDSai) |
 
 #### Architecture:
 
