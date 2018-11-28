@@ -1,6 +1,6 @@
 # Awesome AI Infrastructures
 
-:orange_book: List of AI infrastructures (a.k.a., machine learning systems, pipelines, and platforms) for machine/deep learning training and/or inference in production :electric_plug:. Feel free to contribute / star / fork / pull request. Any recommendations and suggestions are welcome.
+:orange_book: List of AI infrastructures (a.k.a., machine learning systems, pipelines, and platforms) for machine/deep learning training and/or inference in production :electric_plug:. Feel free to contribute / star / fork / pull request. Any recommendations and suggestions are welcome :tada:.
 
 ***
 
@@ -18,15 +18,15 @@ in **no specific order**. This list cares more about overall architectures of AI
 
 ### [TFX](https://www.tensorflow.org/tfx/) - TensorFlow Extended ([Google](https://www.google.com/about/))
 
-> TensorFlow Extended (TFX) is a [Tensorflow](https://www.tensorflow.org/)-based general-purpose machine learning platform implemented at Google.
+> TensorFlow Extended (TFX) is a [TensorFlow](https://www.tensorflow.org/)-based general-purpose machine learning platform implemented at Google.
 
-| [__homepage__](https://www.tensorflow.org/tfx/) | [__talk__](https://www.youtube.com/watch?v=vdG7uKQ2eKk) | [__KDD'17 paper__](https://dl.acm.org/citation.cfm?id=3098021) |
+| [__homepage__](https://www.tensorflow.org/tfx/) | [__talk__](https://www.youtube.com/watch?v=vdG7uKQ2eKk) | [__paper__](https://dl.acm.org/citation.cfm?id=3098021) |
 
 #### Architecture:
 
 ![fig-tfx](images/google-tfx-arch.jpeg)
 
-#### Features:
+#### Components:
 
 - **TensorFlow Data Validation**: a library for exploring and validating machine learning data.
 
@@ -40,13 +40,13 @@ in **no specific order**. This list cares more about overall architectures of AI
 
 > The Kubeflow project is dedicated to making deployments of machine learning (ML) workflows on **[Kubernetes](https://kubernetes.io/)** simple, portable and scalable. Our goal is not to recreate other services, but to provide a straightforward way to deploy best-of-breed open-source systems for ML to diverse infrastructures. Anywhere you are running [Kubernetes](https://kubernetes.io/), you should be able to run Kubeflow.
 
-> Kubeflow started as an open sourcing of the way Google ran [Tensorflow](https://www.tensorflow.org/) internally, based on a pipeline called TensorFlow Extended.
+> Kubeflow started as an open sourcing of the way Google ran [TensorFlow](https://www.tensorflow.org/) internally, based on a pipeline called TensorFlow Extended.
 
 | [__homepage__](https://www.kubeflow.org/) | [__github__](https://github.com/kubeflow/kubeflow) | [__documentation__](https://www.kubeflow.org/docs/about/kubeflow/) |
 [__blog__](https://kubernetes.io/blog/2017/12/introducing-kubeflow-composable/) |
 [__talk__](https://conferences.oreilly.com/strata/strata-ny-2018/public/schedule/detail/69041) | [__slices__](https://cdn.oreillystatic.com/en/assets/1/event/278/Kubeflow%20explained_%20Portable%20machine%20learning%20on%20Kubernetes%20Presentation.pdf) |
 
-#### Features:
+#### Components:
 
 - **Notebooks**: a JupyterHub to create and manage interactive Jupyter notebooks.
 
@@ -54,7 +54,7 @@ in **no specific order**. This list cares more about overall architectures of AI
 
 - **Model Serving**: a TensorFlow Serving container to export trained TensorFlow models to [Kubernetes](https://kubernetes.io/). Integrated with Seldon Core, an open source platform for deploying machine learning models on [Kubernetes](https://kubernetes.io/), and NVIDIA TensorRT Inference Server for maximized GPU utilization when deploying ML/DL models at scale.
 
-- **Multi-Framework**: includes [Tensorflow](https://www.tensorflow.org/), [PyTorch](https://pytorch.org/), [MXNet](https://mxnet.apache.org/), [Chainer](https://chainer.org/), and more.
+- **Multi-Framework**: includes [TensorFlow](https://www.tensorflow.org/), [PyTorch](https://pytorch.org/), [MXNet](https://mxnet.apache.org/), [Chainer](https://chainer.org/), and more.
 
 ### Michelangelo - Uber's Machine Learning Platform ([Uber](https://www.uber.com/))
 
@@ -68,7 +68,7 @@ in **no specific order**. This list cares more about overall architectures of AI
 
 ![fig-michelangelo](images/uber-michelangelo-arch.png)
 
-#### Features:
+#### Components:
 
 - Manage data
 - Train models
@@ -89,7 +89,7 @@ in **no specific order**. This list cares more about overall architectures of AI
 
 ![fig-rapids](images/nvidia-rapids-arch.png)
 
-#### Features:
+#### Components:
 
 - **[Apache Arrow](https://arrow.apache.org/)**: a columnar, in-memory data structure that delivers efficient and fast data interchange with flexibility to support complex data models.
 
@@ -113,7 +113,7 @@ in **no specific order**. This list cares more about overall architectures of AI
 
 ![fig-fblearner](images/facebook-fblearnerflow-arch.png)
 
-#### Features:
+#### Components:
 
 - Experimentation Management UI
 - Launching Workflows
@@ -132,7 +132,7 @@ up for easy, fast, and scalable distributed training.
 
 ![fig-alchemist](images/apple-alchemist-arch.png)
 
-#### Features:
+#### Components:
 
 - **UI Layer**: command line interface (CLI) and a web UI.
 
@@ -145,7 +145,7 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 ### FfDL - Fabric for Deep Learning ([IBM](https://www.ibm.com/))
 
-> Deep learning frameworks such as [Tensorflow](https://www.tensorflow.org/), [PyTorch](https://pytorch.org/), Caffe, Torch, Theano, and MXNet have contributed to the popularity of deep learning by reducing the effort and skills needed to design, train, and use deep learning models. Fabric for Deep Learning (FfDL, pronounced “fiddle”) provides a consistent way to run these deep-learning frameworks as a service on **[Kubernetes](https://kubernetes.io/)**.
+> Deep learning frameworks such as [TensorFlow](https://www.tensorflow.org/), [PyTorch](https://pytorch.org/), Caffe, Torch, Theano, and MXNet have contributed to the popularity of deep learning by reducing the effort and skills needed to design, train, and use deep learning models. Fabric for Deep Learning (FfDL, pronounced “fiddle”) provides a consistent way to run these deep-learning frameworks as a service on **[Kubernetes](https://kubernetes.io/)**.
 
 | [__blog__](https://developer.ibm.com/code/open/projects/fabric-for-deep-learning-ffdl/) | [__github__](https://github.com/IBM/FfDL) |
 
@@ -153,7 +153,7 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 ![fig-ffdl](images/ibm-ffdl-arch-2.png)
 
-#### Features:
+#### Components:
 
 - **REST API**: the REST API microservice handles REST-level HTTP requests and acts as proxy to the lower-level gRPC Trainer service.
 
@@ -173,11 +173,11 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 ![fig-bigdl](images/intel-bigdl-arch.png)
 
-#### Features:
+#### Components:
 
 - **Rich deep learning support**. Modeled after Torch, BigDL provides comprehensive support for deep learning, including numeric computing (via Tensor) and high level neural networks; in addition, users can load pre-trained Caffe or Torch models into Spark programs using BigDL.
 
-- **Extremely high performance**. To achieve high performance, BigDL uses Intel MKL and multi-threaded programming in each Spark task. Consequently, it is orders of magnitude faster than out-of-box open source Caffe, Torch or [Tensorflow](https://www.tensorflow.org/) on a single-node Xeon (i.e., comparable with mainstream GPU).
+- **Extremely high performance**. To achieve high performance, BigDL uses Intel MKL and multi-threaded programming in each Spark task. Consequently, it is orders of magnitude faster than out-of-box open source Caffe, Torch or [TensorFlow](https://www.tensorflow.org/) on a single-node Xeon (i.e., comparable with mainstream GPU).
 
 - **Efficiently scale-out**. BigDL can efficiently scale out to perform data analytics at "Big Data scale", by leveraging Apache Spark (a lightning fast distributed data processing framework), as well as efficient implementations of synchronous SGD and all-reduce communications on Spark.
 
@@ -201,7 +201,7 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 ![fig-transmogrifai](images/salesforce-transmogrifai-arch.png)
 
-#### Features:
+#### Components:
 
 - Build production ready machine learning applications in hours, not months.
 
@@ -219,7 +219,7 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 ![fig-mlflow](images/databricks-mlflow-arch.png)
 
-#### Features:
+#### Components:
 
 - **MLflow Tracking**: tracking experiments to record and compare parameters and results.
 
@@ -275,11 +275,12 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 # Large-Scale Distributed AI Training Efforts
 
-Major milestones for "ImageNet in X nanoseconds" :roller_coaster:.
+Major milestones for "[ImageNet](http://www.image-net.org/) in X nanoseconds" :roller_coaster:.
 
 | initial date | resources             | elapsed           | top-1 accuracy | batch size | link                             |
 |--------------|-----------------------|-------------------|----------------|------------|----------------------------------|
 | June 2017    | 256 NVIDIA P100 GPUs  | 1 hour            | 76.3%          | 8192       | https://arxiv.org/abs/1706.02677 |
+| Aug 2017     | 256 NVIDIA P100 GPUs  | 50 mins           | 75.01%         | 8192       | https://arxiv.org/abs/1708.02188 |
 | Sep 2017     | 512 KNLs -> 2048 KNLs | 1 hour -> 20 mins | 72.4% -> 75.4% | 32768      | https://arxiv.org/abs/1709.05011 |
 | Nov 2017     | 128 Google TPUs (v2)  | 30 mins           | 76.1%          | 16384      | https://arxiv.org/abs/1711.00489 |
 | Nov 2017     | 1024 NVIDIA P100 GPUs | 15 mins           | 74.9%          | 32768      | https://arxiv.org/abs/1711.04325 |
@@ -292,6 +293,10 @@ Major milestones for "ImageNet in X nanoseconds" :roller_coaster:.
 - Learning rate linear scaling rule
 - Learning rate warmup (constant, gradual)
 - Communication: [recursive halving and doubling algorithm](https://pdfs.semanticscholar.org/8d44/e92b3597d9e3f5245e152c9e0ce55b3e68a4.pdf)
+
+#### [PowerAI DDL](https://arxiv.org/abs/1708.02188)
+
+- Topology-aware communication
 
 #### [ImageNet Training in Minutes](https://arxiv.org/abs/1709.05011)
 
