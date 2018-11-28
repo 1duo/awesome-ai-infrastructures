@@ -1,11 +1,6 @@
-# <big> <strong>Awesome AI Infrastructures</strong> </big>
+# Awesome AI Infrastructures
 
-***
-
-<p align="center">
 :orange_book: List of AI infrastructures (a.k.a., machine learning systems, pipelines, and platforms) for machine/deep learning training and/or inference in production :electric_plug:. Feel free to contribute / star / fork / pull request. Any recommendations and suggestions are welcome.
-
-</p>
 
 ***
 
