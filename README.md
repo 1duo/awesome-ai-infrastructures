@@ -30,7 +30,7 @@ in **no specific order**. This list cares more about overall architectures of AI
 
 #### Architecture:
 
-![fig-tfx](images/google-tfx-arch.jpeg)
+![fig-tfx](images/google-tfx-arch.png)
 
 #### Components:
 
