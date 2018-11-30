@@ -30,7 +30,7 @@ in **no specific order**. This list cares more about overall architectures of AI
 
 #### Architecture:
 
-![fig-tfx](images/google-tfx-arch.png)
+<p align="center"><img src="images/google-tfx-arch.png" width="80%"/></p>
 
 #### Components:
 
@@ -42,7 +42,7 @@ in **no specific order**. This list cares more about overall architectures of AI
 
 - **TensorFlow Serving**: a flexible, high-performance serving system for machine learning models, designed for production environments
 
-### [KubeFlow](https://www.kubeflow.org/) - The Machine Learning Toolkit for [Kubernetes](https://kubernetes.io/) ([Google](https://www.google.com/about/))
+### [Kubeflow](https://www.kubeflow.org/) - The Machine Learning Toolkit for [Kubernetes](https://kubernetes.io/) ([Google](https://www.google.com/about/))
 
 > The Kubeflow project is dedicated to making deployments of machine learning (ML) workflows on [Kubernetes](https://kubernetes.io/) simple, portable and scalable. Our goal is not to recreate other services, but to provide a straightforward way to deploy best-of-breed open-source systems for ML to diverse infrastructures. Anywhere you are running [Kubernetes](https://kubernetes.io/), you should be able to run Kubeflow.
 
@@ -72,7 +72,7 @@ in **no specific order**. This list cares more about overall architectures of AI
 
 #### Architecture:
 
-![fig-michelangelo](images/uber-michelangelo-arch.png)
+<p align="center"><img src="images/uber-michelangelo-arch.png" width="80%"/></p>
 
 #### Components:
 
@@ -93,7 +93,7 @@ in **no specific order**. This list cares more about overall architectures of AI
 
 #### Architecture:
 
-![fig-rapids](images/nvidia-rapids-arch.png)
+<p align="center"><img src="images/nvidia-rapids-arch.png" width="80%"/></p>
 
 #### Components:
 
@@ -117,7 +117,7 @@ in **no specific order**. This list cares more about overall architectures of AI
 
 #### Architecture:
 
-![fig-fblearner](images/facebook-fblearnerflow-arch.png)
+<p align="center"><img src="images/facebook-fblearnerflow-arch.png" width="80%"/></p>
 
 #### Components:
 
@@ -136,7 +136,7 @@ up for easy, fast, and scalable distributed training.
 
 #### Architecture:
 
-![fig-alchemist](images/apple-alchemist-arch.png)
+<p align="center"><img src="images/apple-alchemist-arch.png" width="80%"/></p>
 
 #### Components:
 
@@ -157,7 +157,7 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 #### Architecture:
 
-![fig-ffdl](images/ibm-ffdl-arch-2.png)
+<p align="center"><img src="images/ibm-ffdl-arch-2.png" width="80%"/></p>
 
 #### Components:
 
@@ -177,7 +177,7 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 #### Architecture:
 
-![fig-bigdl](images/intel-bigdl-arch.png)
+<p align="center"><img src="images/intel-bigdl-arch.png" width="80%"/></p>
 
 #### Components:
 
@@ -195,7 +195,7 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 #### Architecture:
 
-![fig-sagemaker](images/amazon-sagemaker-arch.png)
+<p align="center"><img src="images/amazon-sagemaker-arch.png" width="80%"/></p>
 
 ### TransmogrifAI ([Salesforce](https://www.salesforce.com/))
 
@@ -205,7 +205,7 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 #### Architecture:
 
-![fig-transmogrifai](images/salesforce-transmogrifai-arch.png)
+<p align="center"><img src="images/salesforce-transmogrifai-arch.png" width="80%"/></p>
 
 #### Components:
 
@@ -223,7 +223,7 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 #### Architecture:
 
-![fig-mlflow](images/databricks-mlflow-arch.png)
+<p align="center"><img src="images/databricks-mlflow-arch.png" width="80%"/></p>
 
 #### Components:
 
@@ -241,7 +241,7 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 | [__h2o__](https://www.h2o.ai/products/h2o/) | [__h2o4gpu__](https://www.h2o.ai/products/h2o4gpu/) |
 
-![fig-h2o](images/h2o-arch.png)
+<p align="center"><img src="images/h2o-arch.png" width="80%"/></p>
 
 # Machine Learning Model Deployment
 
@@ -253,7 +253,7 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 | [__documentation__](https://developer.apple.com/documentation/coreml) |
 
-![fig-coreml](images/apple-coreml-arch.png)
+<p align="center"><img src="images/apple-coreml-arch.png" width="80%"/></p>
 
 ### Greengrass ([Amazon Web Service](https://aws.amazon.com/?nc2=h_lg))
 
@@ -261,7 +261,7 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 | [__blog__](https://aws.amazon.com/greengrass/) |
 
-![fig-greengrass](images/amazon-greengrass-arch.png)
+<p align="center"><img src="images/amazon-greengrass-arch.png" width="80%"/></p>
 
 ### GraphPipe ([Oracle](https://www.oracle.com/index.html))
 
@@ -269,7 +269,7 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 | [__homepage__](https://oracle.github.io/graphpipe/#/) | [__github__](https://github.com/oracle/graphpipe) | [__documentation__](https://oracle.github.io/graphpipe/#/guide/user-guide/overview) |
 
-![fig-graphpipe](images/oracle-graphpipe-arch.jpg)
+<p align="center"><img src="images/oracle-graphpipe-arch.jpg" width="80%"/></p>
 
 ### PocketFlow ([Tencent](https://www.tencent.com/en-us/))
 
@@ -277,7 +277,7 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 | [__homepage__](https://pocketflow.github.io/) | [__github__](https://github.com/Tencent/PocketFlow) |
 
-![fig-pocketflow](images/tencent-pocketflow-arch.png)
+<p align="center"><img src="images/tencent-pocketflow-arch.png" width="80%"/></p>
 
 # Large-Scale Distributed AI Training Efforts
 
