@@ -5,13 +5,14 @@
 </h1>
 
 <p align="center">
-:orange_book: List of real-world AI infrastructures (a.k.a., **machine learning
-systems, pipelines, workflows**, and **platforms**) for machine/deep learning training
-and/or inference **in production** :electric_plug:. This usually includes technology
-stack necessary to enable machine learning algorithms run in production
-environments in a stable, scalable and reliable way. The list is for my own
-learning purpose, but feel free to **contribute** / star / fork / pull request. Any
-recommendations and suggestions are welcome :tada:.
+:orange_book: List of real-world AI infrastructures (a.k.a., <strong>machine
+learning systems, pipelines, workflows</strong>, and <strong>platforms</strong>)
+for machine/deep learning training and/or inference <strong>in
+production</strong> :electric_plug:. This usually includes technology stack
+necessary to enable machine learning algorithms run in production environments
+in a stable, scalable and reliable way. The list is for my own earning purpose,
+but feel free to <strong>contribute</strong> / star / fork / pull request. Any
+ecommendations and suggestions are welcome :tada:.
 </p>
 
 ***
