@@ -5,20 +5,32 @@
 </h1>
 
 <p align="center">
-:orange_book: List of AI infrastructures (a.k.a., machine learning systems, pipelines, and platforms) for machine/deep learning training and/or inference in production :electric_plug:. Feel free to contribute / star / fork / pull request. Any recommendations and suggestions are welcome :tada:.
+:orange_book: List of real-world AI infrastructures (a.k.a., **machine learning
+systems, pipelines, workflows**, and **platforms**) for machine/deep learning training
+and/or inference **in production** :electric_plug:. This usually includes technology
+stack necessary to enable machine learning algorithms run in production
+environments in a stable, scalable and reliable way. The list is for my own
+learning purpose, but feel free to **contribute** / star / fork / pull request. Any
+recommendations and suggestions are welcome :tada:.
 </p>
 
 ***
 
 # Introduction
 
-This list contains some popular actively-maintained AI infrastructures that focus on one or more of the following topics:
+This list contains some popular actively-maintained AI infrastructures that
+focus on one or more of the following topics:
 
-- Architecture of **end-to-end** machine learning **pipelines**
-- **Deployment** at scale in production on Cloud :cloud: or on end devices :iphone:
-- Novel ideas of efficient large-scale distributed **training**
+- Architecture of **end-to-end** machine learning training **pipelines**.
+- **Inference** at scale in production on Cloud :cloud: or on end devices :iphone:.
+- **Compiler and optimization** stacks for deployments on variety of devices.
+- Novel ideas of efficient large-scale **distributed training**.
 
-in **no specific order**. This list cares more about overall architectures of AI solutions in production instead of individual machine/deep learning training or inference frameworks.
+in **no specific order**. This list cares more about overall architectures of AI
+solutions in production instead of individual machine/deep learning training or
+inference frameworks. My learning goals are: understand the workflows and
+principles of how to build (large-scale) systems that can enable machine
+learning in production.
 
 # End-to-End Machine Learning Platforms
 
@@ -30,7 +42,7 @@ in **no specific order**. This list cares more about overall architectures of AI
 
 #### Architecture:
 
-<p align="center"><img src="images/google-tfx-arch.png" width="80%"/></p>
+<p align="center"><img src="images/google-tfx-arch.png" width="90%"/></p>
 
 #### Components:
 
@@ -62,27 +74,6 @@ in **no specific order**. This list cares more about overall architectures of AI
 
 - **Multi-Framework**: includes [TensorFlow](https://www.tensorflow.org/), [PyTorch](https://pytorch.org/), [MXNet](https://mxnet.apache.org/), [Chainer](https://chainer.org/), and more.
 
-### Michelangelo - Uber's Machine Learning Platform ([Uber](https://www.uber.com/))
-
-> Michelangelo, an internal ML-as-a-service platform that democratizes machine learning and makes scaling AI to meet the needs of business as easy as requesting a ride.
-
-> Michelangelo consists of a mix of open source systems and components built in-house. The primary open sourced components used are [HDFS](https://hortonworks.com/apache/hdfs/), [Spark](https://spark.apache.org/), [Samza](http://samza.apache.org/), [Cassandra](http://cassandra.apache.org/), [MLLib](https://spark.apache.org/mllib/), [XGBoost](https://github.com/dmlc/xgboost), and [TensorFlow](https://www.tensorflow.org/).
-
-| [__blog__](https://eng.uber.com/michelangelo/) | [__use-cases__](https://eng.uber.com/scaling-michelangelo/) |
-
-#### Architecture:
-
-<p align="center"><img src="images/uber-michelangelo-arch.png" width="80%"/></p>
-
-#### Components:
-
-- Manage data
-- Train models
-- Evaluate models
-- Deploy models
-- Make predictions
-- Monitor predictions
-
 ### RAPIDS - Open GPU Data Science ([NVIDIA](https://www.nvidia.com/en-us/))
 
 > The RAPIDS suite of open source software libraries gives you the freedom to execute end-to-end data science and analytics pipelines entirely on GPUs. It relies on NVIDIA® CUDA® primitives for low-level compute optimization, but exposes that GPU parallelism and high-bandwidth memory speed through user-friendly Python interfaces.
@@ -93,7 +84,7 @@ in **no specific order**. This list cares more about overall architectures of AI
 
 #### Architecture:
 
-<p align="center"><img src="images/nvidia-rapids-arch.png" width="80%"/></p>
+<p align="center"><img src="images/nvidia-rapids-arch.png" width="90%"/></p>
 
 #### Components:
 
@@ -109,6 +100,45 @@ in **no specific order**. This list cares more about overall architectures of AI
 
 - **Visualization Libraries**: RAPIDS will include tightly integrated data visualization libraries based on [Apache Arrow](https://arrow.apache.org/). Native GPU in-memory data format provides high-performance, high-FPS data visualization, even with very large datasets.
 
+### Michelangelo - Uber's Machine Learning Platform ([Uber](https://www.uber.com/))
+
+> Michelangelo, an internal ML-as-a-service platform that democratizes machine learning and makes scaling AI to meet the needs of business as easy as requesting a ride.
+
+> Michelangelo consists of a mix of open source systems and components built in-house. The primary open sourced components used are [HDFS](https://hortonworks.com/apache/hdfs/), [Spark](https://spark.apache.org/), [Samza](http://samza.apache.org/), [Cassandra](http://cassandra.apache.org/), [MLLib](https://spark.apache.org/mllib/), [XGBoost](https://github.com/dmlc/xgboost), and [TensorFlow](https://www.tensorflow.org/).
+
+| [__blog__](https://eng.uber.com/michelangelo/) | [__use-cases__](https://eng.uber.com/scaling-michelangelo/) |
+
+#### Architecture:
+
+<p align="center"><img src="images/uber-michelangelo-arch.png" width="90%"/></p>
+
+#### Components:
+
+- Manage data
+- Train models
+- Evaluate models
+- Deploy models
+- Make predictions
+- Monitor predictions
+
+### COTA: Improving Uber Customer Care with NLP & Machine Learning ([Uber](https://www.uber.com/))
+
+> COTA, our Customer Obsession Ticket Assistant, a tool that uses machine learning and natural language processing (NLP) techniques to help agents deliver better customer support. Leveraging our Michelangelo machine learning-as-a-service platform on top of our customer support platform
+
+| [__blog__](https://eng.uber.com/cota/) |
+
+#### Architecture:
+
+<p align="center"><img src="images/uber-cota-arch.png" width="90%"/></p>
+
+#### Components:
+
+- Preprocessing
+- Topic modeling
+- Feature engineering
+- Pointwise ranking algorithm
+
+
 ### FBLearner ([Facebook](https://www.facebook.com/))
 
 > FBLearner Flow is capable of easily reusing algorithms in different products, scaling to run thousands of simultaneous custom experiments, and managing experiments with ease.
@@ -117,7 +147,7 @@ in **no specific order**. This list cares more about overall architectures of AI
 
 #### Architecture:
 
-<p align="center"><img src="images/facebook-fblearnerflow-arch.png" width="80%"/></p>
+<p align="center"><img src="images/facebook-fblearnerflow-arch.png" width="90%"/></p>
 
 #### Components:
 
@@ -136,7 +166,7 @@ up for easy, fast, and scalable distributed training.
 
 #### Architecture:
 
-<p align="center"><img src="images/apple-alchemist-arch.png" width="80%"/></p>
+<p align="center"><img src="images/apple-alchemist-arch.png" width="90%"/></p>
 
 #### Components:
 
@@ -157,7 +187,7 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 #### Architecture:
 
-<p align="center"><img src="images/ibm-ffdl-arch-2.png" width="80%"/></p>
+<p align="center"><img src="images/ibm-ffdl-arch-2.png" width="90%"/></p>
 
 #### Components:
 
@@ -177,7 +207,7 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 #### Architecture:
 
-<p align="center"><img src="images/intel-bigdl-arch.png" width="80%"/></p>
+<p align="center"><img src="images/intel-bigdl-arch.png" width="90%"/></p>
 
 #### Components:
 
@@ -195,7 +225,7 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 #### Architecture:
 
-<p align="center"><img src="images/amazon-sagemaker-arch.png" width="80%"/></p>
+<p align="center"><img src="images/amazon-sagemaker-arch.png" width="90%"/></p>
 
 ### TransmogrifAI ([Salesforce](https://www.salesforce.com/))
 
@@ -205,7 +235,7 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 #### Architecture:
 
-<p align="center"><img src="images/salesforce-transmogrifai-arch.png" width="80%"/></p>
+<p align="center"><img src="images/salesforce-transmogrifai-arch.png" width="90%"/></p>
 
 #### Components:
 
@@ -223,7 +253,7 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 #### Architecture:
 
-<p align="center"><img src="images/databricks-mlflow-arch.png" width="80%"/></p>
+<p align="center"><img src="images/databricks-mlflow-arch.png" width="90%"/></p>
 
 #### Components:
 
@@ -241,9 +271,9 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 | [__h2o__](https://www.h2o.ai/products/h2o/) | [__h2o4gpu__](https://www.h2o.ai/products/h2o4gpu/) |
 
-<p align="center"><img src="images/h2o-arch.png" width="80%"/></p>
+<p align="center"><img src="images/h2o-arch.png" width="90%"/></p>
 
-# Machine Learning Model Deployment
+# Machine Learning Model Inference/Deployment
 
 ### Apple's CoreML
 
@@ -253,7 +283,7 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 | [__documentation__](https://developer.apple.com/documentation/coreml) |
 
-<p align="center"><img src="images/apple-coreml-arch.png" width="80%"/></p>
+<p align="center"><img src="images/apple-coreml-arch.png" width="90%"/></p>
 
 ### Greengrass ([Amazon Web Service](https://aws.amazon.com/?nc2=h_lg))
 
@@ -261,7 +291,7 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 | [__blog__](https://aws.amazon.com/greengrass/) |
 
-<p align="center"><img src="images/amazon-greengrass-arch.png" width="80%"/></p>
+<p align="center"><img src="images/amazon-greengrass-arch.png" width="90%"/></p>
 
 ### GraphPipe ([Oracle](https://www.oracle.com/index.html))
 
@@ -269,7 +299,7 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 | [__homepage__](https://oracle.github.io/graphpipe/#/) | [__github__](https://github.com/oracle/graphpipe) | [__documentation__](https://oracle.github.io/graphpipe/#/guide/user-guide/overview) |
 
-<p align="center"><img src="images/oracle-graphpipe-arch.jpg" width="80%"/></p>
+<p align="center"><img src="images/oracle-graphpipe-arch.jpg" width="90%"/></p>
 
 ### PocketFlow ([Tencent](https://www.tencent.com/en-us/))
 
@@ -277,7 +307,52 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 | [__homepage__](https://pocketflow.github.io/) | [__github__](https://github.com/Tencent/PocketFlow) |
 
-<p align="center"><img src="images/tencent-pocketflow-arch.png" width="80%"/></p>
+<p align="center"><img src="images/tencent-pocketflow-arch.png" width="90%"/></p>
+
+### TVM - End to End Deep Learning Compiler Stack ([Amazon](https://aws.amazon.com/?nc2=h_lg))
+
+> TVM is a compiler stack for deep learning systems. It is designed to close the gap between the productivity-focused deep learning frameworks, and the performance- and efficiency-focused hardware backends. TVM works with deep learning frameworks to provide end to end compilation to different backends. Checkout the tvm stack homepage for more information.
+
+| [__homepage__](https://tvm.ai/) | [__github__](https://github.com/dmlc/tvm) | [__documentation__](https://docs.tvm.ai/) | [__paper__](https://arxiv.org/abs/1802.04799) |
+
+#### Architecture:
+
+<p align="center"><img src="images/amazon-tvm-arch.png" width="90%"/></p>
+
+#### Components:
+
+- **Compilation of deep learning models** in Keras, MXNet, PyTorch, Tensorflow, CoreML, DarkNet into minimum deploy-able modules on diverse hardware backends.
+
+- **Infrastructure to automatic generate and optimize tensor operators** on more backend with better performance.
+
+### Glow - A community-driven approach to AI infrastructure ([Facebook](https://www.facebook.com/))
+
+> Glow is a machine learning compiler that accelerates the performance of deep learning frameworks on different hardware platforms. It enables the ecosystem of hardware developers and researchers to focus on building next gen hardware accelerators that can be supported by deep learning frameworks like PyTorch.
+
+| [ __homepage__](https://facebook.ai/developers/tools/glow) | [__github__](https://github.com/pytorch/glow) | [__blog__](https://code.fb.com/ml-applications/glow-a-community-driven-approach-to-ai-infrastructure/) |  [__paper__](https://arxiv.org/abs/1805.00907) |
+
+#### Architecture:
+
+<p align="center"><img src="images/facebook-glow-arch.gif" width="90%"/></p>
+
+#### Components:
+
+- **High-level intermediate representation** allows the optimizer to perform domain-specific optimizations.
+
+- **Lower-level intermediate representation**, an instruction-based address-only representation allows the compiler to perform memory-related optimizations, such as instruction scheduling, static memory allocation, and copy elimination.
+
+- The **optimizer** then performs machine-specific code generation to take advantage of specialized hardware features.
+
+
+### ONNX - Open Neural Network Exchange
+
+> ONNX is a open format to represent deep learning models. With ONNX, AI developers can more easily move models between state-of-the-art tools and choose the combination that is best for them. ONNX is developed and supported by a community of partners.
+
+| [__homepage__](https://onnx.ai/) | [__documentation__](https://onnx.ai/getting-started) | [__github__](https://github.com/onnx) |
+
+#### Architecture
+
+<p align="center"><img src="images/onnx-arch.png" width="90%"/></p>
 
 # Large-Scale Distributed AI Training Efforts
 
@@ -339,3 +414,19 @@ batch size during training
 - Distributed batch normalization
 - Input pipeline optimization: dataset sharding and caching, prefetch, fused JPEG decoding and cropping, parallel data parsing
 - Communication: 2D gradient summation
+
+# Machine Learning System Lectures
+
+#### CSE 599W Systems for ML (University of Washington)
+
+> Over the past few years, deep learning has become an important technique to successfully solve problems in many different fields, such as vision, NLP, robotics. An important ingredient that is driving this success is the development of deep learning systems that efficiently support the task of learning and inference of complicated models using many devices and possibly using distributed resources. The study of how to build and optimize these deep learning systems is now an active area of research and commercialization, and yet there isn’t a course that covers this topic.
+
+> This course is designed to fill this gap. We will be covering various aspects of deep learning systems, including: basics of deep learning, programming models for expressing machine learning models, automatic differentiation, memory optimization, scheduling, distributed learning, hardware acceleration, domain specific languages, and model serving. Many of these topics intersect with existing research directions in databases, systems and networking, architecture and programming languages. The goal is to offer a comprehensive picture on how deep learning systems works, discuss and execute on possible research opportunities, and build open-source software that will have broad appeal.
+
+| [__link__](http://dlsys.cs.washington.edu/) | [__github__](https://github.com/dlsys-course/dlsys-course.github.io) | [__materials__](http://dlsys.cs.washington.edu/schedule) |
+
+#### CSCE 790: Machine Learning Systems
+
+> When we talk about Machine Learning (ML), we typically refer to a technique or an algorithm that gives the computer systems the ability to learn and to reason with data. However, there is a lot more to ML than just implementing an algorithm or a technique. In this course, we will learn the fundamental differences between ML as a technique versus ML as a system in production. A machine learning system involves a significant number of components and it is important that they remain responsive in the face of failure and changes in load. This course covers several strategies to keep ML systems responsive, resilient, and elastic. Machine learning systems are different than other computer systems when it comes to building, testing, deploying, delivering, and evolving. ML systems also have unique challenges when we need to change the architecture or behavior of the system. Therefore, it is essential to learn how to deal with such unique challenges that only may happen when building real-world production-ready ML systems (e.g., performance issues, memory leaking, communication issues, multi-GPU issues, etc). The focus of this course will be primarily on deep learning systems, but the principles will remain similar across all ML systems.
+
+| [__link__](https://pooyanjamshidi.github.io/mls/) | [__github__](https://github.com/pooyanjamshidi/mls) | [__materials__](https://pooyanjamshidi.github.io/mls/lectures/) |
