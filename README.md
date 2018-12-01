@@ -10,7 +10,7 @@ learning systems, pipelines, workflows</strong>, and <strong>platforms</strong>)
 for machine/deep learning training and/or inference <strong>in
 production</strong> :electric_plug:. This usually includes technology stack
 necessary to enable machine learning algorithms run in production environments
-in a stable, scalable and reliable way. The list is for my own earning purpose,
+in a stable, scalable and reliable way. The list is for my own learning purposes,
 but feel free to <strong>contribute</strong> / star / fork / pull request. Any
 ecommendations and suggestions are welcome :tada:.
 </p>
