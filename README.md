@@ -344,6 +344,31 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 - The **optimizer** then performs machine-specific code generation to take advantage of specialized hardware features.
 
+### nGraph - A New Open Source Compiler for Deep Learning Systems ([Intel](https://ai.intel.com/))
+
+> We are pleased to announce the open sourcing of nGraph, a framework-neutral Deep Neural Network (DNN) model compiler that can target a variety of devices. With nGraph, data scientists can focus on data science rather than worrying about how to adapt their DNN models to train and run efficiently on different devices.
+
+| [__homepage__](https://ai.intel.com/intel-ngraph/) | [__documentation__](http://ngraph.nervanasys.com/index.html/) | [__github__](https://github.com/NervanaSystems/ngraph) | [__paper__](https://arxiv.org/abs/1801.08058) |
+
+#### Architecture:
+
+<p align="center"><img src="images/intel-ngraph-arch.png" width="90%"/></p>
+
+#### Components:
+
+- **Fusion**: Fuse multiple ops to to decrease memory usage.
+- **Data layout abstraction**: Make abstraction easier and faster
+    with nGraph translating element order to work best for a given or
+    available device.
+- **Data reuse**: Save results and reuse for subgraphs with the
+    same input.
+- **Graph scheduling**: Run similar subgraphs in parallel via
+    multi-threading.
+- **Graph partitioning**: Partition subgraphs to run on different
+    devices to speed up computation; make better use of spare CPU cycles
+    with nGraph.
+- **Memory management**: Prevent peak memory usage by intercepting
+    a graph with or by a "saved checkpoint," and to enable data auditing.
 
 ### ONNX - Open Neural Network Exchange
 
