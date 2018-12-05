@@ -357,18 +357,16 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 #### Components:
 
 - **Fusion**: Fuse multiple ops to to decrease memory usage.
-- **Data layout abstraction**: Make abstraction easier and faster
-    with nGraph translating element order to work best for a given or
-    available device.
-- **Data reuse**: Save results and reuse for subgraphs with the
-    same input.
-- **Graph scheduling**: Run similar subgraphs in parallel via
-    multi-threading.
-- **Graph partitioning**: Partition subgraphs to run on different
-    devices to speed up computation; make better use of spare CPU cycles
-    with nGraph.
-- **Memory management**: Prevent peak memory usage by intercepting
-    a graph with or by a "saved checkpoint," and to enable data auditing.
+
+- **Data layout abstraction**: Make abstraction easier and faster with nGraph translating element order to work best for a given or available device.
+
+- **Data reuse**: Save results and reuse for subgraphs with the same input.
+
+- **Graph scheduling**: Run similar subgraphs in parallel via multi-threading.
+
+- **Graph partitioning**: Partition subgraphs to run on different devices to speed up computation; make better use of spare CPU cycles with nGraph.
+
+- **Memory management**: Prevent peak memory usage by intercepting a graph with or by a "saved checkpoint," and to enable data auditing.
 
 ### ONNX - Open Neural Network Exchange
 
@@ -376,7 +374,7 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 | [__homepage__](https://onnx.ai/) | [__documentation__](https://onnx.ai/getting-started) | [__github__](https://github.com/onnx) |
 
-#### Architecture
+#### Architecture:
 
 <p align="center"><img src="images/onnx-arch.png" width="90%"/></p>
 
