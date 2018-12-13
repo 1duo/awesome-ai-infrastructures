@@ -33,7 +33,7 @@ inference frameworks. My learning goals are: understand the workflows and
 principles of how to build (large-scale) systems that can enable machine
 learning in production.
 
-# End-to-End Machine Learning Platforms
+# Machine Learning Platforms
 
 ### [TFX](https://www.tensorflow.org/tfx/) - TensorFlow Extended ([Google](https://www.google.com/about/))
 
@@ -274,19 +274,58 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 <p align="center"><img src="images/h2o-arch.png" width="90%"/></p>
 
-# Machine Learning Model Inference/Deployment
+# Model Inference Deployment
 
-### Apple's CoreML
+### CoreML ([Apple](https://www.apple.com/))
 
 > Integrate machine learning models into your app. Core ML is the foundation for domain-specific frameworks and functionality. Core ML supports Vision for image analysis, Natural Language for natural language processing, and GameplayKit for evaluating learned decision trees. Core ML itself builds on top of low-level primitives like Accelerate and BNNS, as well as Metal Performance Shaders.
 
 > Core ML is optimized for on-device performance, which minimizes memory footprint and power consumption. Running strictly on the device ensures the privacy of user data and guarantees that your app remains functional and responsive when a network connection is unavailable.
 
-| [__documentation__](https://developer.apple.com/documentation/coreml) |
+| [__homepage__](https://developer.apple.com/machine-learning/) | [__documentation__](https://developer.apple.com/documentation/coreml) | [__resources__](https://developer.apple.com/machine-learning/build-run-models/) |
 
 <p align="center"><img src="images/apple-coreml-arch.png" width="90%"/></p>
 
-### Greengrass ([Amazon Web Service](https://aws.amazon.com/?nc2=h_lg))
+### TensorFlow Lite
+
+> TensorFlow Lite is the official solution for running machine learning models on mobile and embedded devices. It enables on‑device machine learning inference with low latency and a small binary size on Android, iOS, and other operating systems.
+
+| [__homepage__](https://www.tensorflow.org/lite/) | [__blog__](https://developers.googleblog.com/2017/11/announcing-tensorflow-lite.html) |
+
+#### Architecture:
+
+<p align="center"><img src="images/google-tflite-arch.jpg" width="90%"/></p>
+
+#### Components:
+
+- **TensorFlow Model**: A trained TensorFlow model saved on disk.
+
+- **TensorFlow Lite Converter**: A program that converts the model to the TensorFlow Lite file format.
+
+- **TensorFlow Lite Model File**: A model file format based on FlatBuffers, that has been optimized for maximum speed and minimum size.
+
+### NVIDIA [TensorRT](https://developer.nvidia.com/tensorrt)
+
+> NVIDIA TensorRT™ is a platform for high-performance deep learning inference. It includes a deep learning inference optimizer and runtime that delivers low latency and high-throughput for deep learning inference applications.
+
+| [__homepage__](https://developer.nvidia.com/tensorrt) | [__blog__](https://devblogs.nvidia.com/speed-up-inference-tensorrt/) | [__documentation__](https://docs.nvidia.com/deeplearning/sdk/tensorrt-developer-guide/index.html) | [__benchmark__](https://developer.nvidia.com/deep-learning-performance-training-inference#deeplearningperformance_inference) |
+#### Architecture:
+
+<p align="center"><img src="images/nvidia-tensorrt-arch.png" width="90%"/></p>
+
+#### Components:
+
+- **Weight & Activation Precision Calibration**: Maximizes throughput by quantizing models to INT8 while preserving accuracy.
+
+- **Layer & Tensor Fusion**: Optimizes use of GPU memory and bandwidth by fusing nodes in a kernel.
+
+- **Kernel Auto-Tuning**: Selects best data layers and algorithms based on target GPU platform.
+
+- **Dynamic Tensor Memory**: Minimizes memory footprint and re-uses memory for tensors efficiently.
+
+- **Multi-Stream Execution**: Scalable design to process multiple input streams in parallel.
+
+### AWS [Greengrass](https://aws.amazon.com/greengrass/)
 
 > AWS Greengrass is software that lets you run local compute, messaging, data caching, sync, and ML inference capabilities for connected devices in a secure way. With AWS Greengrass, connected devices can run AWS Lambda functions, keep device data in sync, and communicate with other devices securely – even when not connected to the Internet. Using AWS Lambda, Greengrass ensures your IoT devices can respond quickly to local events, use Lambda functions running on Greengrass Core to interact with local resources, operate with intermittent connections, stay updated with over the air updates, and minimize the cost of transmitting IoT data to the cloud.
 
@@ -300,7 +339,76 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 | [__homepage__](https://oracle.github.io/graphpipe/#/) | [__github__](https://github.com/oracle/graphpipe) | [__documentation__](https://oracle.github.io/graphpipe/#/guide/user-guide/overview) |
 
+#### Architecture:
+
 <p align="center"><img src="images/oracle-graphpipe-arch.jpg" width="90%"/></p>
+
+#### Features:
+
+- A minimalist machine learning transport specification based on [flatbuffers](https://google.github.io/flatbuffers/)
+
+- Simple, efficient reference model servers for Tensorflow, Caffe2, and ONNX.
+
+- Efficient client implementations in Go, Python, and Java.
+
+# Model Training / Inference Optimizations
+
+### TensorFlow XLA (Accelerated Linear Algebra)
+
+> **XLA** (Accelerated Linear Algebra) is a **domain-specific compiler** for linear algebra that optimizes TensorFlow computations. The results are improvements in speed, memory usage, and portability on server and mobile platforms.
+
+> **Improve execution speed**. Compile subgraphs to reduce the execution time of short-lived Ops to eliminate overhead from the TensorFlow runtime, fuse pipelined operations to reduce memory overhead, and specialize to known tensor shapes to allow for more aggressive constant propagation.
+
+> **Improve memory usage**. Analyze and schedule memory usage, in principle eliminating many intermediate storage buffers.
+
+> **Reduce reliance on custom Ops**. Remove the need for many custom Ops by improving the performance of automatically fused low-level Ops to match the performance of custom Ops that were fused by hand.
+
+> **Reduce mobile footprint**. Eliminate the TensorFlow runtime by ahead-of-time compiling the subgraph and emitting an object/header file pair that can be linked directly into another application. The results can reduce the footprint for mobile inference by several orders of magnitude.
+
+> **Improve portability**. Make it relatively easy to write a new backend for novel hardware, at which point a large fraction of TensorFlow programs will run unmodified on that hardware. This is in contrast with the approach of specializing individual monolithic Ops for new hardware, which requires TensorFlow programs to be rewritten to make use of those Ops.
+
+| [__homepage__](https://www.tensorflow.org/xla/) | [__github__](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/compiler) | [__documentation__](https://www.tensorflow.org/xla/overview) | [__blog__](https://developers.googleblog.com/2017/03/xla-tensorflow-compiled.html) | [__talk__](https://www.youtube.com/watch?time_continue=6&v=kAOanJczHA0) |
+
+#### Compilation Process:
+
+<p align="center"><img src="images/google-xla-arch.png" width="50%"/></p>
+
+#### Components:
+
+- TensorFlow graphs compiled
+- Just-In-Time (JIT) compilation
+- Ahead-Of-Time (AOT) compilation
+
+### Swift for TensorFlow
+
+> Swift for TensorFlow is a new way to develop machine learning models. It gives you the power of TensorFlow directly integrated into the [Swift programming language](https://swift.org/). With Swift, you can write the following imperative code, and Swift automatically turns it into **a single TensorFlow Graph** and runs it with the full performance of TensorFlow Sessions on CPU, GPU and TPU.
+
+> Swift combines the flexibility of [Eager Execution](https://www.tensorflow.org/guide/eager) with the high performance of [Graphs and Sessions](https://www.tensorflow.org/guide/graphs). Behind the scenes, Swift analyzes your Tensor code and automatically builds graphs for you. Swift also catches type errors and shape mismatches before running your code, and has [Automatic Differentiation](https://en.wikipedia.org/wiki/Automatic_differentiation) built right in. We believe that machine learning tools are so important that they deserve a **first-class language and a compiler**.
+
+| [__homepage__](https://www.tensorflow.org/swift/api_docs/) | [__github__](https://github.com/tensorflow/swift) | [__design overview__](https://github.com/tensorflow/swift/blob/master/docs/DesignOverview.md) | [__tech deep dive__](https://github.com/tensorflow/swift#technology-deep-dive) |
+
+#### Compiler:
+
+<p align="center"><img src="images/swift-compiler.png" width="90%"/></p>
+
+### JAX - Autograd and XLA
+
+> JAX is [Autograd](https://github.com/hips/autograd) and
+[XLA](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/compiler/xla/g3doc/overview.md),
+brought together for high-performance machine learning research.
+With its updated version of [Autograd](https://github.com/hips/autograd),
+JAX can automatically differentiate native
+Python and NumPy functions. It can differentiate through loops, branches,
+recursion, and closures, and it can take derivatives of derivatives of
+derivatives. It supports reverse-mode differentiation (a.k.a. backpropagation)
+as well as forward-mode differentiation, and the two can be composed arbitrarily
+to any order.
+
+| [__github__](https://github.com/google/jax) |
+
+### How It Works:
+
+<p align="center"><img src="images/google-jax-arch.png" width="90%"/></p>
 
 ### PocketFlow ([Tencent](https://www.tencent.com/en-us/))
 
@@ -378,6 +486,29 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 <p align="center"><img src="images/onnx-arch.png" width="90%"/></p>
 
+#### Components:
+
+- **Framework Interoperability**: enabling interoperability makes it possible to get great ideas into production faster. ONNX enables models to be trained in one framework and transferred to another for inference.
+
+- **Hardware Optimizations**: ONNX makes it easier for optimizations to reach more developers. Any tools exporting ONNX models can benefit ONNX-compatible runtimes and libraries designed to maximize performance on some of the best hardware in the industry.
+
+### AMC - AutoML for Model Compression engine
+
+> We propose AutoML for Model Compression (AMC) which leverage [reinforcement learning](https://en.wikipedia.org/wiki/Reinforcement_learning) to provide the model compression policy. This learning-based compression policy outperforms conventional rule-based compression policy by having higher compression ratio, better preserving the accuracy and freeing human labor.
+
+| [__paper__](https://arxiv.org/abs/1802.03494) |
+
+#### Architecture:
+
+<p align="center"><img src="images/amc-arch.png" width="90%"/></p>
+
+#### Insight:
+
+- **Automated Compression with Reinforcement Learning**, AMC leverages reinforcement learning for efficient search over action space.
+
+- **Search Protocols**: resource-constrained compression,
+accuracy-guaranteed compression.
+
 # Large-Scale Distributed AI Training Efforts
 
 Major milestones for "[ImageNet](http://www.image-net.org/) in X nanoseconds" :roller_coaster:.
@@ -439,7 +570,7 @@ batch size during training
 - Input pipeline optimization: dataset sharding and caching, prefetch, fused JPEG decoding and cropping, parallel data parsing
 - Communication: 2D gradient summation
 
-# Machine Learning System Lectures
+# AI Infrastructures / Machine Learning Systems Online Lectures
 
 #### CSE 599W Systems for ML (University of Washington)
 
@@ -454,3 +585,11 @@ batch size during training
 > When we talk about Machine Learning (ML), we typically refer to a technique or an algorithm that gives the computer systems the ability to learn and to reason with data. However, there is a lot more to ML than just implementing an algorithm or a technique. In this course, we will learn the fundamental differences between ML as a technique versus ML as a system in production. A machine learning system involves a significant number of components and it is important that they remain responsive in the face of failure and changes in load. This course covers several strategies to keep ML systems responsive, resilient, and elastic. Machine learning systems are different than other computer systems when it comes to building, testing, deploying, delivering, and evolving. ML systems also have unique challenges when we need to change the architecture or behavior of the system. Therefore, it is essential to learn how to deal with such unique challenges that only may happen when building real-world production-ready ML systems (e.g., performance issues, memory leaking, communication issues, multi-GPU issues, etc). The focus of this course will be primarily on deep learning systems, but the principles will remain similar across all ML systems.
 
 | [__link__](https://pooyanjamshidi.github.io/mls/) | [__github__](https://github.com/pooyanjamshidi/mls) | [__materials__](https://pooyanjamshidi.github.io/mls/lectures/) |
+
+# AI Infrastructures / Machine Learning Systems Conferences
+
+#### [SysML - Conference on Systems and Machine Learning @ Stanford](https://www.sysml.cc/)
+
+#### [ML Systems Workshop @ NeurIPS](http://learningsys.org)
+
+#### [ScaledML - Scaling ML models, data, algorithms & infrastructure](http://scaledml.org/)
