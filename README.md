@@ -1,8 +1,6 @@
-***
+<p align="center"><img src="images/logo.png" width="100%"/></p>
 
-<h1 align="center">
-:tent: Awesome AI Infrastructures :tent:
-</h1>
+***
 
 <p align="center">
 :orange_book: List of real-world AI infrastructures (a.k.a., <strong>machine
@@ -17,7 +15,7 @@ recommendations and suggestions are welcome :tada:.
 
 ***
 
-# Introduction
+## Introduction
 
 This list contains some popular actively-maintained AI infrastructures that
 focus on one or more of the following topics:
@@ -33,7 +31,7 @@ inference frameworks. My learning goals are: understand the workflows and
 principles of how to build (large-scale) systems that can enable machine
 learning in production.
 
-# Machine Learning Platforms
+## Machine Learning Platforms
 
 ### [TFX](https://www.tensorflow.org/tfx/) - TensorFlow Extended ([Google](https://www.google.com/about/))
 
@@ -85,7 +83,7 @@ learning in production.
 
 #### Architecture:
 
-<p align="center"><img src="images/nvidia-rapids-arch.png" width="90%"/></p>
+<p align="center"><img src="images/nvidia-rapids-arch.png" width="80%"/></p>
 
 #### Components:
 
@@ -167,7 +165,7 @@ up for easy, fast, and scalable distributed training.
 
 #### Architecture:
 
-<p align="center"><img src="images/apple-alchemist-arch.png" width="90%"/></p>
+<p align="center"><img src="images/apple-alchemist-arch.png" width="70%"/></p>
 
 #### Components:
 
@@ -272,9 +270,27 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 | [__h2o__](https://www.h2o.ai/products/h2o/) | [__h2o4gpu__](https://www.h2o.ai/products/h2o4gpu/) |
 
-<p align="center"><img src="images/h2o-arch.png" width="90%"/></p>
+<p align="center"><img src="images/h2o-arch.png" width="80%"/></p>
 
-# Model Inference Deployment
+### Project Ray ([RISELab](https://rise.cs.berkeley.edu/projects/ray/))
+
+> Ray is a high-performance distributed execution framework targeted at large-scale machine learning and reinforcement learning applications. It achieves scalability and fault tolerance by abstracting the control state of the system in a global control store and keeping all other components stateless. It uses a shared-memory distributed object store to efficiently handle large data through shared memory, and it uses a bottom-up hierarchical scheduling architecture to achieve low-latency and high-throughput scheduling. It uses a lightweight API based on dynamic task graphs and actors to express a wide range of applications in a flexible manner.
+
+| [__homepage__](https://ray.readthedocs.io/en/latest/) | [__github__](https://github.com/ray-project/ray) | [__blog__](https://ray-project.github.io/) | [__design overview__](https://ray.readthedocs.io/en/latest/internals-overview.html) | [__paper__](https://arxiv.org/abs/1712.05889) |
+
+#### Architecture:
+
+<p align="center"><img src="images/ucb-ray-arch.png" width="70%"/></p>
+
+#### Components:
+
+- **Tune**: Scalable hyper-parameter search.
+
+- **RLlib**: Scalable reinforcement learning.
+
+- **Distributed** training.
+
+## Model Inference Deployment
 
 ### CoreML ([Apple](https://www.apple.com/))
 
@@ -284,7 +300,7 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 | [__homepage__](https://developer.apple.com/machine-learning/) | [__documentation__](https://developer.apple.com/documentation/coreml) | [__resources__](https://developer.apple.com/machine-learning/build-run-models/) |
 
-<p align="center"><img src="images/apple-coreml-arch.png" width="90%"/></p>
+<p align="center"><img src="images/apple-coreml-arch.png" width="70%"/></p>
 
 ### TensorFlow Lite
 
@@ -341,7 +357,7 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 #### Architecture:
 
-<p align="center"><img src="images/oracle-graphpipe-arch.jpg" width="90%"/></p>
+<p align="center"><img src="images/oracle-graphpipe-arch.jpg" width="60%"/></p>
 
 #### Features:
 
@@ -351,7 +367,7 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 - Efficient client implementations in Go, Python, and Java.
 
-# Model Training / Inference Optimizations
+## Model Training / Inference Optimizations
 
 ### TensorFlow XLA (Accelerated Linear Algebra)
 
@@ -492,6 +508,25 @@ to any order.
 
 - **Hardware Optimizations**: ONNX makes it easier for optimizations to reach more developers. Any tools exporting ONNX models can benefit ONNX-compatible runtimes and libraries designed to maximize performance on some of the best hardware in the industry.
 
+###  Neural Network Distiller (Intel AI Lab)
+
+> Distiller is an open-source Python package for neural network compression research.
+Network compression can reduce the footprint of a neural network, increase its inference speed and save energy. Distiller provides a PyTorch environment for prototyping and analyzing compression algorithms, such as sparsity-inducing methods and low precision arithmetic.
+
+| [__homepage__](https://nervanasystems.github.io/distiller/index.html) | [__github__](https://github.com/NervanaSystems/distiller/) | [__documentation__](https://nervanasystems.github.io/distiller/usage/index.html) |
+
+#### Workflow:
+
+<p align="center"><img src="images/intel-distiller-arch.png" width="70%"/></p>
+
+#### Components:
+
+- A framework for integrating pruning, regularization and quantization algorithms.
+
+- A set of tools for analyzing and evaluating compression performance.
+
+- Example implementations of state-of-the-art compression algorithms.
+
 ### AMC - AutoML for Model Compression engine
 
 > We propose AutoML for Model Compression (AMC) which leverage [reinforcement learning](https://en.wikipedia.org/wiki/Reinforcement_learning) to provide the model compression policy. This learning-based compression policy outperforms conventional rule-based compression policy by having higher compression ratio, better preserving the accuracy and freeing human labor.
@@ -570,7 +605,7 @@ batch size during training
 - Input pipeline optimization: dataset sharding and caching, prefetch, fused JPEG decoding and cropping, parallel data parsing
 - Communication: 2D gradient summation
 
-# AI Infrastructures / Machine Learning Systems Online Lectures
+## AI Infrastructures / Machine Learning Systems Lectures
 
 #### CSE 599W Systems for ML (University of Washington)
 
@@ -586,7 +621,7 @@ batch size during training
 
 | [__link__](https://pooyanjamshidi.github.io/mls/) | [__github__](https://github.com/pooyanjamshidi/mls) | [__materials__](https://pooyanjamshidi.github.io/mls/lectures/) |
 
-# AI Infrastructures / Machine Learning Systems Conferences
+## AI Infrastructures / Machine Learning Systems Conferences
 
 #### [SysML - Conference on Systems and Machine Learning @ Stanford](https://www.sysml.cc/)
 
