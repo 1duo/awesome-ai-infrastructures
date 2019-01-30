@@ -711,6 +711,14 @@ batch size during training
 
 ##### [Communication-Efficient Learning of Deep Networks from Decentralized Data](https://arxiv.org/abs/1602.05629)
 
+##### [Practical Secure Aggregation for Privacy-Preserving Machine Learning](https://eprint.iacr.org/2017/281.pdf)
+
+##### [Federated Multi-Task Learning](https://arxiv.org/abs/1705.10467)
+
 ##### [Protection Against Reconstruction and Its Applications in Private Federated Learning](https://arxiv.org/abs/1812.00984)
 
 ##### [Differentially Private Distributed Learning for Language Modeling Tasks](https://arxiv.org/abs/1712.07473)
+
+##### [Federated Learning for Mobile Keyboard Prediction](https://arxiv.org/abs/1811.03604)
+
+##### [A Generic Framework for Privacy Preserving Deep Learning](https://arxiv.org/abs/1811.04017)
