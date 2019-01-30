@@ -290,6 +290,26 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 - **Distributed** training.
 
+### Angel ([Tencent](https://www.tencent.com/en-us/))
+
+> **Angel** is a high-performance distributed machine learning platform based on the philosophy of **Parameter Server**. It is tuned for performance with big data from Tencent and has a wide range of applicability and stability, demonstrating increasing advantage in handling higher dimension model. Angel is jointly developed by Tencent and Peking University, taking account of both high availability in industry and innovation in academia.
+
+> With **model-centered** core design concept, Angel partitions parameters of complex models into multiple parameter-server nodes, and implements a variety of machine learning algorithms using efficient model-updating interfaces and functions, as well as flexible consistency model for synchronization. Angel is developed with **Java** and **Scala**. It supports running on **Yarn**. With PS Service abstraction, it supports **Spark** on Angel.
+
+| [__github__](https://github.com/Angel-ML/angel) | [__documentation__](https://github.com/Angel-ML/angel/blob/master/README_en.md) | [__paper__](http://net.pku.edu.cn/~cuibin/Papers/2017NSRangel.pdf) |
+
+#### Architecture:
+
+<p align="center"><img src="images/tencent-angel-arch.png" width="90%"/></p>
+
+#### Components:
+
+- **Parameter Server Layer**: provide flexible and multi-framework PS responsible for distributed model storage, communication synchronization and coordination of computing.
+
+- **Worker Layer**: satisfy needs for algorithm development and innovation which automatically read and partition data and compute model delta locally. It communicate with the PS Server to complete the model training and prediction process.
+
+- **Model Layer**: provide necessary functions of PS and support targeted optimization for performance. It hosts functionalities such as model pull/push operations, multiple sync protocols, model partitioner, etc. This layer bridges between the worker layer and the PS layer.
+
 ## Model Inference Deployment
 
 ### CoreML ([Apple](https://www.apple.com/))
@@ -302,7 +322,7 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 <p align="center"><img src="images/apple-coreml-arch.png" width="70%"/></p>
 
-### TensorFlow Lite
+### TensorFlow Lite ([Google](https://www.google.com/about/))
 
 > TensorFlow Lite is the official solution for running machine learning models on mobile and embedded devices. It enables on‑device machine learning inference with low latency and a small binary size on Android, iOS, and other operating systems.
 
@@ -320,7 +340,7 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 - **TensorFlow Lite Model File**: A model file format based on FlatBuffers, that has been optimized for maximum speed and minimum size.
 
-### NVIDIA [TensorRT](https://developer.nvidia.com/tensorrt)
+### [TensorRT](https://developer.nvidia.com/tensorrt) ([NVIDIA]())
 
 > NVIDIA TensorRT™ is a platform for high-performance deep learning inference. It includes a deep learning inference optimizer and runtime that delivers low latency and high-throughput for deep learning inference applications.
 
@@ -341,7 +361,7 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 - **Multi-Stream Execution**: Scalable design to process multiple input streams in parallel.
 
-### AWS [Greengrass](https://aws.amazon.com/greengrass/)
+### [Greengrass](https://aws.amazon.com/greengrass/) ([Amazon](https://aws.amazon.com/?nc2=h_lg))
 
 > AWS Greengrass is software that lets you run local compute, messaging, data caching, sync, and ML inference capabilities for connected devices in a secure way. With AWS Greengrass, connected devices can run AWS Lambda functions, keep device data in sync, and communicate with other devices securely – even when not connected to the Internet. Using AWS Lambda, Greengrass ensures your IoT devices can respond quickly to local events, use Lambda functions running on Greengrass Core to interact with local resources, operate with intermittent connections, stay updated with over the air updates, and minimize the cost of transmitting IoT data to the cloud.
 
@@ -357,7 +377,7 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 #### Architecture:
 
-<p align="center"><img src="images/oracle-graphpipe-arch.jpg" width="60%"/></p>
+<p align="center"><img src="images/oracle-graphpipe-arch.jpg" width="70%"/></p>
 
 #### Features:
 
@@ -367,9 +387,9 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 - Efficient client implementations in Go, Python, and Java.
 
-## Model Training / Inference Optimizations
+## Model Training / Inference Optimization
 
-### TensorFlow XLA (Accelerated Linear Algebra)
+### TensorFlow XLA (Accelerated Linear Algebra) ([Google](https://www.google.com/about/))
 
 > **XLA** (Accelerated Linear Algebra) is a **domain-specific compiler** for linear algebra that optimizes TensorFlow computations. The results are improvements in speed, memory usage, and portability on server and mobile platforms.
 
@@ -395,7 +415,7 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 - Just-In-Time (JIT) compilation
 - Ahead-Of-Time (AOT) compilation
 
-### Swift for TensorFlow
+### Swift for TensorFlow ([Google](https://www.google.com/about/)/[Apple](https://www.apple.com/))
 
 > Swift for TensorFlow is a new way to develop machine learning models. It gives you the power of TensorFlow directly integrated into the [Swift programming language](https://swift.org/). With Swift, you can write the following imperative code, and Swift automatically turns it into **a single TensorFlow Graph** and runs it with the full performance of TensorFlow Sessions on CPU, GPU and TPU.
 
@@ -407,7 +427,7 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 <p align="center"><img src="images/swift-compiler.png" width="90%"/></p>
 
-### JAX - Autograd and XLA
+### JAX - Autograd and XLA ([Google](https://www.google.com/about/))
 
 > JAX is [Autograd](https://github.com/hips/autograd) and
 [XLA](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/compiler/xla/g3doc/overview.md),
@@ -449,6 +469,14 @@ to any order.
 - **Compilation of deep learning models** in Keras, MXNet, PyTorch, Tensorflow, CoreML, DarkNet into minimum deploy-able modules on diverse hardware backends.
 
 - **Infrastructure to automatic generate and optimize tensor operators** on more backend with better performance.
+
+### SageMaker Neo ([Amazon](https://aws.amazon.com/?nc2=h_lg))
+
+> Amazon SageMaker Neo enables developers to train machine learning models once and run them anywhere in the cloud and at the edge. Amazon SageMaker Neo optimizes models to run up to twice as fast, with less than a tenth of the memory footprint, with no loss in accuracy.
+
+| [__homepage__](https://aws.amazon.com/sagemaker/neo/) | [__github__](https://github.com/neo-ai/) | [__blog__](https://aws.amazon.com/blogs/aws/amazon-sagemaker-neo-train-your-machine-learning-models-once-run-them-anywhere/) |
+
+<p align="center"><img src="images/amazon-sagemaker-neo-arch.png" width="90%"/></p>
 
 ### Glow - A community-driven approach to AI infrastructure ([Facebook](https://www.facebook.com/))
 
@@ -508,7 +536,7 @@ to any order.
 
 - **Hardware Optimizations**: ONNX makes it easier for optimizations to reach more developers. Any tools exporting ONNX models can benefit ONNX-compatible runtimes and libraries designed to maximize performance on some of the best hardware in the industry.
 
-###  Neural Network Distiller (Intel AI Lab)
+###  Neural Network Distiller ([Intel](https://ai.intel.com/))
 
 > Distiller is an open-source Python package for neural network compression research.
 Network compression can reduce the footprint of a neural network, increase its inference speed and save energy. Distiller provides a PyTorch environment for prototyping and analyzing compression algorithms, such as sparsity-inducing methods and low precision arithmetic.
@@ -526,6 +554,46 @@ Network compression can reduce the footprint of a neural network, increase its i
 - A set of tools for analyzing and evaluating compression performance.
 
 - Example implementations of state-of-the-art compression algorithms.
+
+### MACE - Mobile AI Compute Engine ([XiaoMi](https://www.mi.com/global/))
+
+> MACE (Mobile AI Compute Engine) is a deep learning inference framework optimized for mobile heterogeneous computing platforms. MACE provides tools and documents to help users to deploy deep learning models to mobile phones, tablets, personal computers and IoT devices.
+
+| [__github__](https://github.com/XiaoMi/mace) | [__documentation__](https://mace.readthedocs.io/en/latest/introduction.html) |
+
+#### Architecture:
+
+<p align="center"><img src="images/xiaomi-mace-arch.png" width="50%"/></p>
+
+### Components:
+
+* Performance
+  * Runtime is optimized with NEON, OpenCL and Hexagon, and
+    [Winograd algorithm](https://arxiv.org/abs/1509.09308) is introduced to
+    speed up convolution operations. The initialization is also optimized to be faster.
+* Power consumption
+  * Chip dependent power options like big.LITTLE scheduling, Adreno GPU hints are
+    included as advanced APIs.
+* Responsiveness
+  * UI responsiveness guarantee is sometimes obligatory when running a model.
+    Mechanism like automatically breaking OpenCL kernel into small units is
+    introduced to allow better preemption for the UI rendering task.
+* Memory usage and library footprint
+  * Graph level memory allocation optimization and buffer reuse are supported.
+    The core library tries to keep minimum external dependencies to keep the
+    library footprint small.
+* Model protection
+  * Model protection has been the highest priority since the beginning of
+    the design. Various techniques are introduced like converting models to C++
+    code and literal obfuscations.
+* Platform coverage
+  * Good coverage of recent Qualcomm, MediaTek, Pinecone and other ARM based
+    chips. CPU runtime is also compatible with most POSIX systems and
+    architectures with limited performance.
+* Rich model formats support
+  * [TensorFlow](https://github.com/tensorflow/tensorflow),
+    [Caffe](https://github.com/BVLC/caffe) and
+    [ONNX](https://github.com/onnx/onnx) model formats are supported.
 
 ### AMC - AutoML for Model Compression engine
 
