@@ -15,7 +15,7 @@ recommendations and suggestions are welcome :tada:.
 
 ***
 
-## Introduction
+# Introduction
 
 This list contains some popular actively-maintained AI infrastructures that
 focus on one or more of the following topics:
@@ -31,7 +31,7 @@ inference frameworks. My learning goals are: understand the workflows and
 principles of how to build (large-scale) systems that can enable machine
 learning in production.
 
-## Machine Learning Platforms
+# Platforms
 
 ### [TFX](https://www.tensorflow.org/tfx/) - TensorFlow Extended ([Google](https://www.google.com/about/))
 
@@ -310,7 +310,7 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 
 - **Model Layer**: provide necessary functions of PS and support targeted optimization for performance. It hosts functionalities such as model pull/push operations, multiple sync protocols, model partitioner, etc. This layer bridges between the worker layer and the PS layer.
 
-## Model Inference Deployment
+# Deployment and Optimizations
 
 ### CoreML ([Apple](https://www.apple.com/))
 
@@ -386,8 +386,6 @@ allows them to upload and browse the code assets, submit distributed jobs, and q
 - Simple, efficient reference model servers for Tensorflow, Caffe2, and ONNX.
 
 - Efficient client implementations in Go, Python, and Java.
-
-## Model Training / Inference Optimization
 
 ### TensorFlow XLA (Accelerated Linear Algebra) ([Google](https://www.google.com/about/))
 
@@ -612,7 +610,43 @@ Network compression can reduce the footprint of a neural network, increase its i
 - **Search Protocols**: resource-constrained compression,
 accuracy-guaranteed compression.
 
-# Large-Scale Distributed AI Training Efforts
+# Courses
+
+#### CSE 599W Systems for ML (University of Washington)
+
+> This course will be covering various aspects of deep learning systems, including: basics of deep learning, programming models for expressing machine learning models, automatic differentiation, memory optimization, scheduling, distributed learning, hardware acceleration, domain specific languages, and model serving. Many of these topics intersect with existing research directions in databases, systems and networking, architecture and programming languages. The goal is to offer a comprehensive picture on how deep learning systems works, discuss and execute on possible research opportunities, and build open-source software that will have broad appeal.
+
+| [__link__](http://dlsys.cs.washington.edu/) | [__github__](https://github.com/dlsys-course/dlsys-course.github.io) | [__materials__](http://dlsys.cs.washington.edu/schedule) |
+
+#### CSCE 790: Machine Learning Systems
+
+> In this course, we will learn the fundamental differences between ML as a technique versus ML as a system in production. A machine learning system involves a significant number of components and it is important that they remain responsive in the face of failure and changes in load. This course covers several strategies to keep ML systems responsive, resilient, and elastic. Machine learning systems are different than other computer systems when it comes to building, testing, deploying, delivering, and evolving. ML systems also have unique challenges when we need to change the architecture or behavior of the system. Therefore, it is essential to learn how to deal with such unique challenges that only may happen when building real-world production-ready ML systems (e.g., performance issues, memory leaking, communication issues, multi-GPU issues, etc). The focus of this course will be primarily on deep learning systems, but the principles will remain similar across all ML systems.
+
+| [__link__](https://pooyanjamshidi.github.io/mls/) | [__github__](https://github.com/pooyanjamshidi/mls) | [__materials__](https://pooyanjamshidi.github.io/mls/lectures/) |
+
+# Conferences
+
+#### [SysML - Conference on Systems and Machine Learning @ Stanford](https://www.sysml.cc/)
+
+#### [ML Systems Workshop @ NeurIPS](http://learningsys.org)
+
+#### [ScaledML - Scaling ML models, data, algorithms & infrastructure](http://scaledml.org/)
+
+# Papers
+
+## Survey / Reviews
+
+##### [A Survey on Compiler Autotuning using Machine Learning](https://arxiv.org/abs/1801.04405)
+
+> This survey summarizes and classifies the recent advances in using machine learning for the compiler optimization field, particularly on the two major problems of (1) selecting the best optimizations and (2) the phase-ordering of optimizations. The survey highlights the approaches taken so far, the obtained results, the fine-grain classification among different approaches and finally, the influential papers of the field.
+
+##### [A Survey of Model Compression and Acceleration for Deep Neural Networks](https://arxiv.org/abs/1710.09282)
+
+> In this paper, we survey the recent advanced techniques for compacting and accelerating CNNs model developed. These techniques are roughly categorized into four schemes: parameter pruning and sharing, low-rank factorization, transfered/compact convolutional filters and knowledge distillation. Methods of parameter pruning and sharing will be described at the beginning, after that the other techniques will be introduced. For each scheme, we provide insightful analysis regarding the performance, related applications, advantages and drawbacks etc. Then we will go through a few very recent additional successful methods, for example, dynamic networks and stochastic depths networks. After that, we survey the evaluation matrix, main datasets used for evaluating the model performance and recent bench-marking efforts. Finally we conclude this paper, discuss remaining challenges and possible directions in this topic.
+
+## Large-Scale / Distributed Learning
+
+### Milestones
 
 Major milestones for "[ImageNet](http://www.image-net.org/) in X nanoseconds" :roller_coaster:.
 
@@ -627,45 +661,45 @@ Major milestones for "[ImageNet](http://www.image-net.org/) in X nanoseconds" :r
 | Nov 2018     | 2176 NVIDIA V100 GPUs | 3.7 mins          | 75.03%         | 69632      | https://arxiv.org/abs/1811.06992 |
 | Nov 2018     | 1024 Google TPUs (v3) | 2.2 mins          | 76.3%          | 32768      | https://arxiv.org/abs/1811.06992 |
 
-#### [Accurate, Large Minibatch SGD: Training ImageNet in 1 Hour](https://arxiv.org/abs/1706.02677)
+##### [Accurate, Large Minibatch SGD: Training ImageNet in 1 Hour](https://arxiv.org/abs/1706.02677)
 
 - Learning rate linear scaling rule
 - Learning rate warmup (constant, gradual)
 - Communication: [recursive halving and doubling algorithm](https://pdfs.semanticscholar.org/8d44/e92b3597d9e3f5245e152c9e0ce55b3e68a4.pdf)
 
-#### [PowerAI DDL](https://arxiv.org/abs/1708.02188)
+##### [PowerAI DDL](https://arxiv.org/abs/1708.02188)
 
 - Topology-aware communication
 
-#### [ImageNet Training in Minutes](https://arxiv.org/abs/1709.05011)
+##### [ImageNet Training in Minutes](https://arxiv.org/abs/1709.05011)
 
 -  Layer-wise Adaptive Rate Scaling (LARS)
 
-#### [Don't Decay the Learning Rate, Increase the Batch Size](https://arxiv.org/abs/1711.00489)
+##### [Don't Decay the Learning Rate, Increase the Batch Size](https://arxiv.org/abs/1711.00489)
 
 - Decaying the learning rate is simulated annealing
 - Instead of decaying the learning rate, increase the
 batch size during training
 
-#### [Extremely Large Minibatch SGD: Training ResNet-50 on ImageNet in 15 Minutes](https://arxiv.org/abs/1711.04325)
+##### [Extremely Large Minibatch SGD: Training ResNet-50 on ImageNet in 15 Minutes](https://arxiv.org/abs/1711.04325)
 
 - RMSprop Warm-up
 - Slow-start learning rate schedule
 - Batch normalization without moving averages
 
-#### [Highly Scalable Deep Learning Training System with Mixed-Precision: Training ImageNet in Four Minutes](https://arxiv.org/abs/1807.11205)
+##### [Highly Scalable Deep Learning Training System with Mixed-Precision: Training ImageNet in Four Minutes](https://arxiv.org/abs/1807.11205)
 
 - Mixed precision
 - Layer-wise Adaptive Rate Scaling (LARS)
 - Improvements on model architecture
 - Communication: tensor fusion, hierarchical all-reduce, hybrid all-reduce
 
-#### [ImageNet/ResNet-50 Training in 224 Seconds](https://arxiv.org/abs/1811.05233)
+##### [ImageNet/ResNet-50 Training in 224 Seconds](https://arxiv.org/abs/1811.05233)
 
 - Batch size control to reduce accuracy degradation with mini-batch size exceeding 32K
 - Communication: 2D-torus all-reduce
 
-#### [Image Classification at Supercomputer Scale](https://arxiv.org/abs/1811.06992)
+##### [Image Classification at Supercomputer Scale](https://arxiv.org/abs/1811.06992)
 
 - Mixed precision
 - Layer-wise Adaptive Rate Scaling (LARS)
@@ -673,26 +707,10 @@ batch size during training
 - Input pipeline optimization: dataset sharding and caching, prefetch, fused JPEG decoding and cropping, parallel data parsing
 - Communication: 2D gradient summation
 
-## AI Infrastructures / Machine Learning Systems Lectures
+## Federated Learning
 
-#### CSE 599W Systems for ML (University of Washington)
+##### [Communication-Efficient Learning of Deep Networks from Decentralized Data](https://arxiv.org/abs/1602.05629)
 
-> Over the past few years, deep learning has become an important technique to successfully solve problems in many different fields, such as vision, NLP, robotics. An important ingredient that is driving this success is the development of deep learning systems that efficiently support the task of learning and inference of complicated models using many devices and possibly using distributed resources. The study of how to build and optimize these deep learning systems is now an active area of research and commercialization, and yet there isn’t a course that covers this topic.
+##### [Protection Against Reconstruction and Its Applications in Private Federated Learning](https://arxiv.org/abs/1812.00984)
 
-> This course is designed to fill this gap. We will be covering various aspects of deep learning systems, including: basics of deep learning, programming models for expressing machine learning models, automatic differentiation, memory optimization, scheduling, distributed learning, hardware acceleration, domain specific languages, and model serving. Many of these topics intersect with existing research directions in databases, systems and networking, architecture and programming languages. The goal is to offer a comprehensive picture on how deep learning systems works, discuss and execute on possible research opportunities, and build open-source software that will have broad appeal.
-
-| [__link__](http://dlsys.cs.washington.edu/) | [__github__](https://github.com/dlsys-course/dlsys-course.github.io) | [__materials__](http://dlsys.cs.washington.edu/schedule) |
-
-#### CSCE 790: Machine Learning Systems
-
-> When we talk about Machine Learning (ML), we typically refer to a technique or an algorithm that gives the computer systems the ability to learn and to reason with data. However, there is a lot more to ML than just implementing an algorithm or a technique. In this course, we will learn the fundamental differences between ML as a technique versus ML as a system in production. A machine learning system involves a significant number of components and it is important that they remain responsive in the face of failure and changes in load. This course covers several strategies to keep ML systems responsive, resilient, and elastic. Machine learning systems are different than other computer systems when it comes to building, testing, deploying, delivering, and evolving. ML systems also have unique challenges when we need to change the architecture or behavior of the system. Therefore, it is essential to learn how to deal with such unique challenges that only may happen when building real-world production-ready ML systems (e.g., performance issues, memory leaking, communication issues, multi-GPU issues, etc). The focus of this course will be primarily on deep learning systems, but the principles will remain similar across all ML systems.
-
-| [__link__](https://pooyanjamshidi.github.io/mls/) | [__github__](https://github.com/pooyanjamshidi/mls) | [__materials__](https://pooyanjamshidi.github.io/mls/lectures/) |
-
-## AI Infrastructures / Machine Learning Systems Conferences
-
-#### [SysML - Conference on Systems and Machine Learning @ Stanford](https://www.sysml.cc/)
-
-#### [ML Systems Workshop @ NeurIPS](http://learningsys.org)
-
-#### [ScaledML - Scaling ML models, data, algorithms & infrastructure](http://scaledml.org/)
+##### [Differentially Private Distributed Learning for Language Modeling Tasks](https://arxiv.org/abs/1712.07473)
