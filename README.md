@@ -585,6 +585,28 @@ to any order.
 
 - **Hardware Optimizations**: ONNX makes it easier for optimizations to reach more developers. Any tools exporting ONNX models can benefit ONNX-compatible runtimes and libraries designed to maximize performance on some of the best hardware in the industry.
 
+### MLIR - "Multi-Level Intermediate Representation" Compiler Infrastructure
+
+> The MLIR project aims to define a common intermediate representation (IR) that will unify the infrastructure required to execute high performance machine learning models in TensorFlow and similar ML frameworks. This project will include the application of HPC techniques, along with integration of search algorithms like reinforcement learning. This project aims to reduce the cost to bring up new hardware, and improve usability for existing TensorFlow users.
+
+| [__homepage__]() | [__github__](https://github.com/tensorflow/mlir) | [__talk__](https://www.youtube.com/watch?v=qzljG6DKgic) | [__slices__](https://llvm.org/devmtg/2019-04/slides/Keynote-ShpeismanLattner-MLIR.pdf) |
+
+#### Architecture:
+
+<p align="center"><img src="images/mlir-arch.png" width="90%"/></p>
+
+#### Goal:
+
+Global improvements to TensorFlow infrastructure, SSA-based designs to generalize and improve ML “graphs”:
+
+- Better side effect modeling and control flow representation
+
+- Improve generality of the lowering passes
+
+- Dramatically increase code reuse
+
+- Fix location tracking and other pervasive issues for better user experience 
+
 ###  Neural Network Distiller ([Intel](https://ai.intel.com/))
 
 > Distiller is an open-source Python package for neural network compression research.
